@@ -25,7 +25,7 @@ let name = "Nikita"
 let greeting = "Hello \(name), your age is \(age)"
 
 //7.
-//1. let a = 21 / 8 = 2.625
+//1. let a = 21 / 8 = 2
 //2. let b = 21 % 8 = 5
 //3. let c = a == b = False
 //4. let d = a != b = True
