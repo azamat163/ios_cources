@@ -178,3 +178,42 @@ calc.division
   //3. Enum’ы - ответ нет
 
 //10. Представим, что вы создаете rpg игру. Напишите структуру для хранения координаты игрока, enum для направлений (восток, сервер, запад, юг) и функцию, которая берет к себе на вход позицию и направление и возвращает новую координату (после того как игрок походил на одну клетку в соответствующую сторону). Вызовите эту функцию несколько раз, «походив» своим игроком
+
+struct Point {
+    var x: Double
+    var y: Double
+}
+
+enum Direction {
+    case east
+    case north
+    case west
+    case south
+}
+
+func move(point: Point, direction: Direction) -> Point {
+    switch direction {
+    case .east: return Point(x: point.x, y: point.y - 1)
+    case .north: return Point(x: point.x, y: point.y + 1)
+    case .west: return Point(x: point.x + 1, y: point.y)
+    case .south: return Point(x: point.x - 1, y: point.y)
+    }
+}
+
+let step1 = move(point: Point(x: 0.0, y: 3.2), direction: .north)
+let step2 = move(point: step1, direction: .west)
+let step3 = move(point: step2, direction: .north)
+step3.x
+step3.y
+
+
+//Можно ли в enum’е хранить дополнительные данные?
+//Можно
+
+//В каких случаях удобнее структурировать данные и функции в класс?
+// Когда нам нужно описать базовый класс и его производные
+
+//В каких случаях лучше использовать класс, а в каких – структуру?
+// Когда нам нужно описать базовый класс и его производные, также для объектов которые занимают большой объем памяти и ресурсоемкие тоже являются кандидами для оборачивание в класс
+// Для хранения значений лучше всего использовать структуры так  как они просты в понимаю 
+
