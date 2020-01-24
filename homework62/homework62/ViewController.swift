@@ -12,21 +12,15 @@ protocol Operable {
     func operation() -> Int
 }
 
-class Calculator {
+struct Calculator {
     var first: Int
     var second: Int
     var opr: Operation
-
-    init(a: Int, b: Int, opr: Operation) {
-        self.first = a
-        self.second = b
-        self.opr = opr
-    }
 }
 
 extension Calculator: Operable {
     func operation() -> Int {
-        switch self.opr {
+        switch opr {
         case .plus: return first + second
         case .minus: return first - second
         case .multiplication: return Int(first * second)
@@ -35,22 +29,11 @@ extension Calculator: Operable {
     }
 }
 
-
 enum Operation: String {
-    case plus
-    case minus
-    case multiplication
-    case division
-
-    init(opr: String) {
-        switch opr {
-        case "+": self = .plus
-        case "-": self = .minus
-        case "*": self = .multiplication
-        default:
-            self = .division
-        }
-    }
+    case plus = "+"
+    case minus = "-"
+    case multiplication = "*"
+    case division = "/"
 }
 
 class ViewController: UIViewController {
@@ -69,36 +52,32 @@ class ViewController: UIViewController {
     }
 
     @IBAction func calculateAction(_ sender: Any) {
-        var first = firstTextField.text!
-        var second = secondTextField.text!
-        var operation = operationTextField.text!
-        var resultLabel = resultTextLabel.text!
-        var number1: Int?
-        var number2: Int?
-        var opr: Operation?
+        let first = firstTextField.text!
+        let second = secondTextField.text!
+        let operation = operationTextField.text!
 
-        if first.isEmpty{
-            first = "Введите целое число в строку"
-        } else if Int(first) == nil {
-            first = "Некорректные данные"
+        if first.isEmpty || second.isEmpty{
+            resultTextLabel.text = "Введите целое число в строку"
+        } else if Int(first) == nil ||  Int(second) == nil{
+            resultTextLabel.text = "Некорректные данные"
         } else {
-            number1 = Int(first)
+            let calc = Calculator(
+                first: Int(first)!,
+                second: Int(second)!,
+                opr: getOperation(operation)
+            )
+            let result = calc.operation()
+            resultTextLabel.text = String(result)
         }
-
-        if second.isEmpty{
-            second = "Введите целое число в строку"
-        } else if Int(second) == nil {
-            second = "Некорректные данные"
-        } else {
-            number2 = Int(second)
+    }
+    
+    func getOperation(_ opr: String) -> Operation{
+        switch opr {
+        case "+": return Operation.plus
+        case "-": return Operation.minus
+        case "*": return Operation.multiplication
+        default: return Operation.division
         }
-
-        opr = Operation(opr: operation)
-        let calc = Calculator(a: number1!, b: number2!, opr: opr!)
-        let result = calc.operation()
-        print(result)
-        resultLabel = String(result)
-
     }
 
 }
