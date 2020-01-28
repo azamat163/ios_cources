@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Change Background View Controller-->
+        <!--tab3-->
         <scene sceneID="kl0-hl-YaR">
             <objects>
                 <viewController storyboardIdentifier="ChangeBackgroundViewController" id="Emx-B8-1bG" customClass="ChangeBackgroundViewController" customModule="homework71" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,6 +41,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="cgk-nR-xog"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="tab3" id="zSy-gR-RFA"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29j-q2-eAb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,6 +73,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="U7v-ot-Mdf"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ne-gZ-fA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

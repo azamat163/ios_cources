@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		038D67B823E0AF2100230282 /* SelectionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 038D67B723E0AF2100230282 /* SelectionStoryboard.storyboard */; };
 		80E9789523E00DBF006FFC10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E9789423E00DBF006FFC10 /* AppDelegate.swift */; };
 		80E9789723E00DBF006FFC10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E9789623E00DBF006FFC10 /* SceneDelegate.swift */; };
 		80E9789923E00DBF006FFC10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E9789823E00DBF006FFC10 /* ViewController.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		038D67B723E0AF2100230282 /* SelectionStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectionStoryboard.storyboard; sourceTree = "<group>"; };
 		80E9789123E00DBF006FFC10 /* homework71.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homework71.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E9789423E00DBF006FFC10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80E9789623E00DBF006FFC10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		038D67B623E0AEF800230282 /* Selection */ = {
+			isa = PBXGroup;
+			children = (
+				80E978DE23E0689E006FFC10 /* SelectionViewController.swift */,
+				038D67B723E0AF2100230282 /* SelectionStoryboard.storyboard */,
+			);
+			path = Selection;
+			sourceTree = "<group>";
+		};
 		80E9788823E00DBF006FFC10 = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				80E978E523E06CE3006FFC10 /* NestedViewController.swift */,
-				80E978DE23E0689E006FFC10 /* SelectionViewController.swift */,
+				038D67B623E0AEF800230282 /* Selection */,
 				80E978E023E06B8F006FFC10 /* ChangeBackground */,
 				80E978D923E0633B006FFC10 /* Change */,
 				80E978D423E02EE8006FFC10 /* Transition */,
@@ -338,6 +349,7 @@
 				80E978CE23E00EFA006FFC10 /* BlueStoryboard.storyboard in Resources */,
 				80E978DD23E0637E006FFC10 /* ChangeStoryboard.storyboard in Resources */,
 				80E978D823E02F56006FFC10 /* TransitionStoryboard.storyboard in Resources */,
+				038D67B823E0AF2100230282 /* SelectionStoryboard.storyboard in Resources */,
 				80E978D323E00F22006FFC10 /* RedStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

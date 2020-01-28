@@ -10,6 +10,8 @@ import UIKit
 
 class ChangeViewController: UIViewController {
 
+    @IBOutlet weak var nameColorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,14 +19,11 @@ class ChangeViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func changeColor(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "SelectionStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SelectionViewController")
+        present(vc, animated: true, completion: nil)
     }
-    */
+    
 
 }

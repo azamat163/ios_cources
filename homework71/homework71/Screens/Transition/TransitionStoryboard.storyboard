@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Transition View Controller-->
+        <!--tab1-->
         <scene sceneID="tfS-Y7-BLZ">
             <objects>
                 <viewController storyboardIdentifier="TransitionViewController" id="fQd-WS-pXF" customClass="TransitionViewController" customModule="homework71" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="переход на экран Green"/>
                                 <connections>
-                                    <segue destination="7cp-r9-yAh" kind="show" id="mwO-x8-asG"/>
+                                    <action selector="showGreen:" destination="fQd-WS-pXF" eventType="touchUpInside" id="gpv-Sz-Hj8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JE-SG-eLl">
@@ -28,7 +28,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="переход на экран Blue"/>
                                 <connections>
-                                    <segue destination="bpr-A1-ZRo" kind="show" id="dzD-WQ-6Ef"/>
+                                    <action selector="showBlue:" destination="fQd-WS-pXF" eventType="touchUpInside" id="Npe-33-d9t"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWZ-5L-0Ow">
@@ -36,48 +36,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="переход на экран Red"/>
                                 <connections>
-                                    <segue destination="Hdf-Rp-Sml" kind="show" id="p8d-72-sIN"/>
+                                    <action selector="showRed:" destination="fQd-WS-pXF" eventType="touchUpInside" id="EXO-EE-6ZL"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6wH-Xu-7ck"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="tab1" id="GbL-19-lDc"/>
                     <navigationItem key="navigationItem" id="JEa-8u-6AY"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oGG-cL-LA8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1913.0434782608697" y="111.83035714285714"/>
-        </scene>
-        <!--BlueViewController-->
-        <scene sceneID="6mh-53-qxQ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="BlueStoryboard" referencedIdentifier="BlueViewController" id="bpr-A1-ZRo" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="2Rz-Dj-9kf"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tVa-ay-Jwz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2621.0144927536235" y="89.732142857142847"/>
-        </scene>
-        <!--GreenViewController-->
-        <scene sceneID="jaF-bQ-oRJ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="GreenStoryboard" referencedIdentifier="GreenViewController" id="7cp-r9-yAh" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="nyP-U4-CW1"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ovl-ZB-3si" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2628.985507246377" y="-2.0089285714285712"/>
-        </scene>
-        <!--RedViewController-->
-        <scene sceneID="laJ-pj-aXF">
-            <objects>
-                <viewControllerPlaceholder storyboardName="RedStoryboard" referencedIdentifier="RedViewController" id="Hdf-Rp-Sml" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="uhQ-kB-zx6"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RNY-rh-Yse" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2620.289855072464" y="184.82142857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BcW-09-A24">
@@ -87,6 +59,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rc7-0V-bng">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Change View Controller-->
+        <!--tab2-->
         <scene sceneID="WVt-AH-Evg">
             <objects>
                 <viewController storyboardIdentifier="ChangeViewController" id="Rg1-ad-Lm3" customClass="ChangeViewController" customModule="homework71" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,56 +27,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Изменить"/>
                                 <connections>
-                                    <segue destination="Ocb-Jj-QMj" kind="show" id="2hd-3R-E6m"/>
+                                    <action selector="changeColor:" destination="Rg1-ad-Lm3" eventType="touchUpInside" id="X4R-2t-QSe"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="lUQ-Ub-AGn"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="tab2" id="OTD-26-1Lh"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="nameColorLabel" destination="jjB-bG-L2d" id="3ot-CC-xGb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Za0-NM-cMR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-17.39130434782609" y="81.696428571428569"/>
-        </scene>
-        <!--Selection View Controller-->
-        <scene sceneID="fFR-iH-fok">
-            <objects>
-                <viewController id="Ocb-Jj-QMj" customClass="SelectionViewController" customModule="homework71" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aul-a9-FKz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOY-tQ-0vd">
-                                <rect key="frame" x="114" y="155" width="175" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Выбрать зеленый"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Je6-JI-MWA">
-                                <rect key="frame" x="114" y="220" width="175" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Выбрать синий"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKE-Yh-WMy">
-                                <rect key="frame" x="114" y="281" width="175" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Выбрать красный"/>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Выбран зеленый" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TZT-sc-2S4">
-                                <rect key="frame" x="114" y="79" width="175" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="cBV-Cm-8bG"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="rl3-sh-yLy"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qyz-Yg-Y8L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="686.95652173913049" y="79.6875"/>
         </scene>
     </scenes>
 </document>
