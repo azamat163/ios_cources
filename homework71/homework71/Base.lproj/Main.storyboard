@@ -12,13 +12,15 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="WMg-k8-zw4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UYq-Kw-lQe">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="PTJ-qW-cxk" kind="relationship" relationship="viewControllers" id="0nb-D1-0TB"/>
-                        <segue destination="XAi-KZ-FYE" kind="relationship" relationship="viewControllers" id="nJL-5Z-ily"/>
-                        <segue destination="FU7-mk-L1C" kind="relationship" relationship="viewControllers" id="eIV-Mu-MnC"/>
+                        <segue destination="jwK-V4-ald" kind="relationship" relationship="viewControllers" id="ycC-t4-PNr"/>
+                        <segue destination="XAi-KZ-FYE" kind="relationship" relationship="viewControllers" id="UnA-RV-Ofu"/>
+                        <segue destination="FU7-mk-L1C" kind="relationship" relationship="viewControllers" id="ro2-DR-UiI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJr-zV-UIb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -29,50 +31,46 @@
         <scene sceneID="E9s-wk-WrH">
             <objects>
                 <viewControllerPlaceholder storyboardName="TransitionStoryboard" referencedIdentifier="TransitionViewController" id="jwK-V4-ald" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="nJJ-BC-fPO"/>
+                    <tabBarItem key="tabBarItem" title="tab1" image="pencil.circle.fill" catalog="system" selectedImage="doc.plaintext" id="VMs-kx-5PE">
+                        <color key="badgeColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="tab1" id="nJJ-BC-fPO"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KkX-Hf-a2d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1159" y="-218"/>
+            <point key="canvasLocation" x="443" y="-39"/>
         </scene>
         <!--ChangeViewController-->
         <scene sceneID="Ny9-yL-bMA">
             <objects>
                 <viewControllerPlaceholder storyboardName="ChangeStoryboard" referencedIdentifier="ChangeViewController" id="XAi-KZ-FYE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="tab2" id="Xcv-w5-Vbh"/>
+                    <tabBarItem key="tabBarItem" title="tab2" image="pencil.circle" catalog="system" selectedImage="doc.append" id="Xcv-w5-Vbh">
+                        <color key="badgeColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ydv-sd-LJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="443" y="187"/>
+            <point key="canvasLocation" x="432" y="66"/>
         </scene>
         <!--ChangeBackgroundViewController-->
         <scene sceneID="ojl-Iz-zZG">
             <objects>
                 <viewControllerPlaceholder storyboardName="ChangeBackgroundStoryboard" referencedIdentifier="ChangeBackgroundViewController" id="FU7-mk-L1C" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="tab3" id="LwM-1L-ysL"/>
+                    <tabBarItem key="tabBarItem" title="tab3" image="pencil" catalog="system" selectedImage="doc.text" id="LwM-1L-ysL">
+                        <color key="badgeColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I29-8S-1NG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="496" y="330"/>
-        </scene>
-        <!--tab1-->
-        <scene sceneID="Qrh-Am-5DH">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PTJ-qW-cxk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="tab1" id="nVh-hd-Vdz"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rVL-im-8us">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="jwK-V4-ald" kind="relationship" relationship="rootViewController" id="jJU-D6-f5j"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="V80-AU-evW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="591" y="-217"/>
+            <point key="canvasLocation" x="485" y="153"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="doc.append" catalog="system" width="56" height="64"/>
+        <image name="doc.plaintext" catalog="system" width="56" height="64"/>
+        <image name="doc.text" catalog="system" width="56" height="64"/>
+        <image name="pencil" catalog="system" width="64" height="56"/>
+        <image name="pencil.circle" catalog="system" width="64" height="60"/>
+        <image name="pencil.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
 </document>
