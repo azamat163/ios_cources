@@ -19,22 +19,31 @@
                                 <rect key="frame" x="91" y="201" width="211" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Зеленый"/>
+                                <connections>
+                                    <action selector="selectGreenNested:" destination="Emx-B8-1bG" eventType="touchUpInside" id="ZwM-1O-6Ue"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mb1-92-gyg">
                                 <rect key="frame" x="91" y="278" width="211" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Желтый"/>
+                                <connections>
+                                    <action selector="selectYellowNested:" destination="Emx-B8-1bG" eventType="touchUpInside" id="0S6-dB-4LR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMR-VK-kWT">
                                 <rect key="frame" x="91" y="348" width="211" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Пурпурный"/>
+                                <connections>
+                                    <action selector="selectPurpleNested:" destination="Emx-B8-1bG" eventType="touchUpInside" id="6Ha-2e-PaX"/>
+                                </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dB0-Mn-dev">
                                 <rect key="frame" x="48" y="456" width="319" height="339"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="nSG-mL-Oue" kind="embed" id="owt-XQ-Yqh"/>
+                                    <segue destination="nSG-mL-Oue" kind="embed" identifier="segue" id="owt-XQ-Yqh"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -60,16 +69,25 @@
                                 <rect key="frame" x="47" y="74" width="211" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Зеленый"/>
+                                <connections>
+                                    <action selector="selectGreenParent:" destination="nSG-mL-Oue" eventType="touchUpInside" id="jAf-Ah-odC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWe-tR-Eoc">
                                 <rect key="frame" x="47" y="151" width="211" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Желтый"/>
+                                <connections>
+                                    <action selector="selectYellowParent:" destination="nSG-mL-Oue" eventType="touchUpInside" id="bq2-YQ-ogI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcF-OI-2dw">
                                 <rect key="frame" x="47" y="221" width="211" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Пурпурный"/>
+                                <connections>
+                                    <action selector="selectPurpleParent:" destination="nSG-mL-Oue" eventType="touchUpInside" id="LQ2-pc-Riq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

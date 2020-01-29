@@ -9,28 +9,34 @@
 import UIKit
 
 protocol SelectionControllerDelegate{
-    func setColor(_ color: String)
+    func setChangedText(_ text: String)
 }
 
 class SelectionViewController: UIViewController {
+    var colorText = ""
     
+    @IBOutlet weak var nameLabel: UILabel!
+
     var delegate: SelectionControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameLabel.text = colorText
+    }
 
-        // Do any additional setup after loading the view.
-    }
-    
     @IBAction func selectGreen(_ sender: Any) {
-        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
-        delegate?.se
+        self.delegate?.setChangedText("зеленый")
+        self.dismiss(animated: true, completion: nil)
     }
-    
+
     @IBAction func selectBlue(_ sender: Any) {
+        self.delegate?.setChangedText("синий")
+        self.dismiss(animated: true, completion: nil)
     }
-    
+
     @IBAction func selectRed(_ sender: Any) {
+        self.delegate?.setChangedText("красный")
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

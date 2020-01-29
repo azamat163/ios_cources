@@ -19,13 +19,16 @@
                                 <rect key="frame" x="114" y="155" width="175" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Выбрать зеленый"/>
+                                <connections>
+                                    <action selector="selectGreen:" destination="3Hs-Tg-0yq" eventType="touchUpInside" id="ccH-p3-XNC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qh-T0-pXD">
                                 <rect key="frame" x="114" y="220" width="175" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Выбрать синий"/>
                                 <connections>
-                                    <action selector="selectBlue:" destination="3Hs-Tg-0yq" eventType="touchUpInside" id="WQZ-On-nOn"/>
+                                    <action selector="selectBlue:" destination="3Hs-Tg-0yq" eventType="touchUpInside" id="ZeJ-bz-J6E"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30c-n0-TOc">
@@ -33,20 +36,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Выбрать красный"/>
                                 <connections>
-                                    <action selector="selectRed:" destination="3Hs-Tg-0yq" eventType="touchUpInside" id="SF9-qt-axv"/>
+                                    <action selector="selectRed:" destination="3Hs-Tg-0yq" eventType="touchUpInside" id="Lxb-xk-420"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Выбран зеленый" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YGo-H3-tyk">
-                                <rect key="frame" x="114" y="79" width="175" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Выбран зеленый" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fcb-aX-I8t">
+                                <rect key="frame" x="125" y="85" width="153" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="utf-27-Tf3"/>
                     </view>
                     <navigationItem key="navigationItem" id="QFi-wh-aLH"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="Fcb-aX-I8t" id="d4l-6u-o5c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mAf-Zs-fY3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

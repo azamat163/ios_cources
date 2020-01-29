@@ -8,23 +8,43 @@
 
 import UIKit
 
+protocol NestedControllerDelegate  {
+    func setColorChild(_ color: UIColor)
+}
+
 class NestedViewController: UIViewController {
+//    var color: UIColor = .clear
+
+    var changeVC: ChangeBackgroundViewController?
+
+    var delegate: NestedControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let vc = segue.destination as? ChangeBackgroundViewController,  segue.identifier == "segue"  {
+            changeVC = vc
+            vc.delegate = self
+        }
     }
-    */
 
+    @IBAction func selectGreenParent(_ sender: Any) {
+        self.delegate?.setColorChild(.green)
+    }
+
+    @IBAction func selectYellowParent(_ sender: Any) {
+        self.delegate?.setColorChild(.yellow)
+    }
+
+    @IBAction func selectPurpleParent(_ sender: Any) {
+        self.delegate?.setColorChild(.purple)
+    }
+}
+
+extension NestedViewController: ChangeBackgroundControllerDelegate {
+    func setColorParent(_ color: UIColor) {
+        self.view.backgroundColor = color
+    }
 }
