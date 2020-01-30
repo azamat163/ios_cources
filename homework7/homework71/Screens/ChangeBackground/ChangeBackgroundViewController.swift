@@ -8,16 +8,12 @@
 
 import UIKit
 
-protocol ChangeBackgroundControllerDelegate {
-    func setColorChild(_ color: UIColor)
-}
+
 
 class ChangeBackgroundViewController: UIViewController {
-
-    var delegateChild: ChangeBackgroundControllerDelegate?
-
+        
     private var nestedVC: NestedViewController?
-
+    
     @IBOutlet weak var nestedView: UIView!
 
     override func viewDidLoad() {
@@ -25,22 +21,26 @@ class ChangeBackgroundViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         if let vc = segue.destination as? NestedViewController  {
+        if let vc = segue.destination as? NestedViewController, segue.identifier == "segue"  {
             nestedVC = vc
             vc.delegateParent = self
         }
     }
-
+    
+    func setColor(_ color: UIColor) {
+        self.view.backgroundColor = color
+    }
+    
     @IBAction func selectGreenNested(_ sender: Any) {
-        delegateChild?.setColorChild(.green)
+        nestedVC?.setColor(.green)
     }
 
     @IBAction func selectYellowNested(_ sender: Any) {
-        delegateChild?.setColorChild(.yellow)
+        nestedVC?.setColor(.yellow)
     }
 
     @IBAction func selectPurpleNested(_ sender: Any) {
-        delegateChild?.setColorChild(.purple)
+        nestedVC?.setColor(.purple)
     }
 }
 

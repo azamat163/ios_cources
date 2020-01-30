@@ -161,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				80E978E023E06B8F006FFC10 /* ChangeBackground */,
-				80E978D923E0633B006FFC10 /* Change */,
+				80E978D923E0633B006FFC10 /* ChangeColor */,
 				80E978D423E02EE8006FFC10 /* Transition */,
 				80E978CF23E00F00006FFC10 /* Red */,
 				80E978CA23E00EBC006FFC10 /* Blue */,
@@ -206,14 +206,14 @@
 			path = Transition;
 			sourceTree = "<group>";
 		};
-		80E978D923E0633B006FFC10 /* Change */ = {
+		80E978D923E0633B006FFC10 /* ChangeColor */ = {
 			isa = PBXGroup;
 			children = (
 				80E978DE23E0689E006FFC10 /* SelectionViewController.swift */,
 				80E978DA23E06377006FFC10 /* ChangeViewController.swift */,
 				80E978DC23E0637E006FFC10 /* ChangeStoryboard.storyboard */,
 			);
-			path = Change;
+			path = ChangeColor;
 			sourceTree = "<group>";
 		};
 		80E978E023E06B8F006FFC10 /* ChangeBackground */ = {
