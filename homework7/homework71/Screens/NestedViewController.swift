@@ -13,9 +13,7 @@ protocol NestedControllerDelegate  {
 }
 
 class NestedViewController: UIViewController {
-    
-    var color: UIColor = .clear
-    
+        
     var delegateParent: NestedControllerDelegate?
                 
     private var changeVC: ChangeBackgroundViewController?
@@ -28,10 +26,6 @@ class NestedViewController: UIViewController {
         if let vc = segue.destination as? ChangeBackgroundViewController, segue.identifier == "segue"  {
             changeVC = vc
         }
-    }
-    
-    func setColor(_ color: UIColor) {
-        self.view.backgroundColor = color
     }
 
     @IBAction func selectGreenParent(_ sender: Any) {
