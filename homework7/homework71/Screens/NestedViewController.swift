@@ -39,4 +39,8 @@ class NestedViewController: UIViewController {
     @IBAction func selectPurpleParent(_ sender: Any) {
         delegateParent?.setColorParent(.purple)
     }
+    
+    func setColor(_ color: UIColor) {
+        self.view.backgroundColor = color
+    }
 }

@@ -27,10 +27,6 @@ class ChangeBackgroundViewController: UIViewController {
         }
     }
     
-    func setColor(_ color: UIColor) {
-        self.view.backgroundColor = color
-    }
-    
     @IBAction func selectGreenNested(_ sender: Any) {
         nestedVC?.setColor(.green)
     }
