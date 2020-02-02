@@ -16,16 +16,8 @@ class NestedViewController: UIViewController {
         
     var delegateParent: NestedControllerDelegate?
                 
-    private var changeVC: ChangeBackgroundViewController?
-
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? ChangeBackgroundViewController, segue.identifier == "segue"  {
-            changeVC = vc
-        }
     }
 
     @IBAction func selectGreenParent(_ sender: Any) {
